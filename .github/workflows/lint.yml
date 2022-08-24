@@ -1,4 +1,4 @@
-name: Verify LINT
+name: Verify Lint
 
 on: pull_request
 
@@ -29,5 +29,5 @@ jobs:
         if: steps.mix-cache-lint.outputs.cache-hit != 'true'
         run: mix deps.get
 
-      - name: ===> Credo LINT
+      - name: ===> Credo Lint
         run: mix credo --strict
